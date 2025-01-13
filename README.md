@@ -68,5 +68,6 @@ The directory structure is organized as follows:
    git clone https://github.com/Knoph1/Alx_DjangoLearnLab.git
    cd Alx_DjangoLearnLab
 
+
    **Thank you !!!**
    
