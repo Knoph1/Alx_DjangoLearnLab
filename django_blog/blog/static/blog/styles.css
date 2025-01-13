@@ -1,0 +1,45 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.content {
+    margin: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    <p><small>Author: {{ post.author }} | Published on: {{ post.published_date }}</small></p>
+    <p>Tags: 
+    {% for tag in post.tags.all %}
+        <a href="{% url 'posts-by-tag' tag.slug %}">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
+    {% endfor %}
+    </p>
+
+    <h2>Comments</h2>
+    {% for comment in comments %}
+        <div>
+            <p>{{ comment.content }}</p>
+            <p><small>Author: {{ comment.author }} | Posted on: {{ comment.created_at }}</small></p>
+            {% if comment.author == user %}
+                <a href="{% url 'edit-comment' comment.pk %}">Edit</a>
+                <a href="{% url 'delete-comment' comment.pk %}">Delete</a>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    <h2>Add a comment</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Post Comment</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!-- blog/templates/blog/post_form.html -->
+{% extends 'blog/base.html' %}
+{% block title %}{{ form.instance.pk|yesno:"Edit Post,Create New Post" }}{% endblock %}
+
+{% block content %}
+<h1>{{ form.instance.pk|yesno:"Edit Post,Create New Post" }}</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+<p>Tags:
+    {% for tag in post.tags.all %}
+    <a href="{% url 'tagged_posts' tag.name %}">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
+    {% endfor %}
+</p>
+
+{% endblock %}

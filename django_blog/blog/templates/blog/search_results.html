@@ -1,0 +1,10 @@
+<!-- blog/templates/blog/search_results.html -->
+
+<h1>Search Results for "{{ query }}"</h1>
+{% for post in results %}
+    <div>
+        <h2><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h2>
+        <p>{{ post.content|slice:":100" }}...</p>
+        <p><small>Author: {{ post.author }} | Published on: {{ post.published_date }}</small></p>
+    </div>
+{% endfor %}

@@ -1,0 +1,22 @@
+<!-- blog/templates/blog/post_detail.html -->
+<h1>{{ post.title }}</h1>
+<p>{{ post.content }}</p>
+
+<h3>Comments:</h3>
+{% for comment in post.comments.all %}
+<div>
+    <p>{{ comment.author.username }} said: {{ comment.content }}</p>
+    <p><em>{{ comment.created_at }}</em></p>
+    {% if comment.author == user %}
+    <a href="{% url 'comment_edit' comment.pk %}">Edit</a>
+    <a href="{% url 'comment_delete' comment.pk %}">Delete</a>
+    {% endif %}
+</div>
+{% endfor %}
+
+<h3>Add a Comment:</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <button type="submit">Add Comment</button>
+</form>

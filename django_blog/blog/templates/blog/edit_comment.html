@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Comment</title>
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+</head>
+<body>
+    <h1>Edit Comment</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>

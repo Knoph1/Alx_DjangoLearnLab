@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    <a href="{% url 'post-create' %}">Create new post</a>
+    {% for post in posts %}
+        <div>
+            <h2><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.content|slice:":100" }}...</p>
+            <p><small>Author: {{ post.author }} | Published on: {{ post.published_date }}</small></p>
+        </div>
+    {% endfor %}
+</body>
+</html>
