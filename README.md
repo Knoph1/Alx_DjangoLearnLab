@@ -15,17 +15,19 @@ The repository includes several subprojects that demonstrate skills learned in t
 ---
 
 ## Folder Structure
-├── .vscode/
-├── .gitignore
-├── README.md
-├── Introduction_to_Django/
-│ └── LibraryProject/
-├── advanced-api-project/
-├── advanced_features_and_security/
-├── api_project/
-├── django-models/
-├── django_blog/
-└── social_media_api/
+
+Alx_DjangoLearnLab/
+├── .vscode/                     # VS Code configuration files
+├── .gitignore                   # Specifies files and directories to ignore by Git
+├── README.md                    # This file, providing an overview and instructions
+├── Introduction_to_Django/      # Contains the "Introduction to Django" related projects
+│   └── LibraryProject/          # A Django project for a library management system
+├── advanced-api-project/        # Advanced API development project, covering authentication, rate-limiting, etc.
+├── advanced_features_and_security/ # Advanced Django features and security practices
+├── api_project/                 # Basic Django Rest Framework API project
+├── django-models/               # Django models creation and relationships examples
+├── django_blog/                 # A Django-based blog project, implementing basic blogging features
+└── social_media_api/            # API for managing user profiles, posts, and interactions in a social media platform
 
 ---
 
