@@ -39,5 +39,5 @@ The repository includes tasks and solutions related to the database creation, po
 1. **Clone this repository**:
 
    ```bash
-   git clone https://github.com/your-username/Intro_to_DB.git
+   git clone https://github.com/Knoph1/Alx_DjangoLearnLab.git
    cd Intro_to_DB
