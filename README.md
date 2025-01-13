@@ -66,13 +66,6 @@ The directory structure is organized as follows:
 
    ```bash
    git clone https://github.com/Knoph1/Alx_DjangoLearnLab.git
-   cd Intro_to_Django
-vvv
-
-1. **Clone this repository**:
-
-   ```bash
-   git clone 
    cd Alx_DjangoLearnLab
 
    **Thank you !!!**
