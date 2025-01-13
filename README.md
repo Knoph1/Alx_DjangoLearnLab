@@ -14,20 +14,23 @@ The repository includes several subprojects that demonstrate skills learned in t
 
 ---
 
-## Folder Structure
+## Folder / Directory Structure
 
-Alx_DjangoLearnLab/
-├── .vscode/                     # VS Code configuration files
-├── .gitignore                   # Specifies files and directories to ignore by Git
-├── README.md                    # This file, providing an overview and instructions
-├── Introduction_to_Django/      # Contains the "Introduction to Django" related projects
-│   └── LibraryProject/          # A Django project for a library management system
-├── advanced-api-project/        # Advanced API development project, covering authentication, rate-limiting, etc.
-├── advanced_features_and_security/ # Advanced Django features and security practices
-├── api_project/                 # Basic Django Rest Framework API project
-├── django-models/               # Django models creation and relationships examples
-├── django_blog/                 # A Django-based blog project, implementing basic blogging features
-└── social_media_api/            # API for managing user profiles, posts, and interactions in a social media platform
+The directory structure is organized as follows:
+
+# Alx_DjangoLearnLab
+- `.vscode/`: Contains VS Code configuration files.
+- `.gitignore`: Specifies files and directories to ignore by Git.
+- `README.md`: This file, providing an overview and instructions.
+- `Introduction_to_Django/`: Contains projects related to an introduction to Django.
+  - `LibraryProject/`: A Django project for a library management system.
+- `advanced-api-project/`: A project that covers advanced API development, including authentication, rate-limiting, and other concepts.
+- `advanced_features_and_security/`: A collection of advanced Django features and best practices for ensuring security in your Django applications.
+- `api_project/`: A basic Django Rest Framework (DRF) API project.
+- `django-models/`: Examples of creating Django models and handling relationships.
+- `django_blog/`: A Django-based blog project that implements basic blogging features.
+- `social_media_api/`: An API project for managing user profiles, posts, and interactions in a social media platform.
+
 
 ---
 
